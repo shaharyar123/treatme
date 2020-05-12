@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+.public-route-container {
+    height: calc(100vh - 83px);
+}
+
+.configuration-route-container {
+    height: calc(100vh - 83px);
+}
+
+.custom-toast {
+    font-family: "Montserrat";
+    border-radius: 5px;
+}
+
+.default-table {
+    font-family: 'Ubuntu';
+}
+
+.default-table>thead th {
+    color: #dc3545;
+    vertical-align: middle;
+}
+
+.default-table>tbody td {
+    vertical-align: middle;
+}
+
+.action-cell {
+    width: 200px;
+}
+
+.modal-heading {
+    color: #dc3545;
+    font-family: 'Ubuntu';
+}

@@ -1,0 +1,14 @@
+.loading-container{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    background-color: #000000a8;
+    color: white;
+    width: 100%;
+    text-align: center;
+     opacity: 22;
+    z-index: 1;
+    display: flex;
+     justify-content: center;
+    align-items: center;
+}

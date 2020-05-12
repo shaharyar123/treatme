@@ -1,0 +1,8 @@
+.default-button{
+    background: #dc3545 !important;
+    border: #dc3545 !important;
+}
+
+.default-button:focus{
+    box-shadow: none !important;
+}

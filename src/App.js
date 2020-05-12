@@ -1,20 +1,25 @@
 import React from 'react';
-import stravaBtn from './assets/images/stravaBtn.png';
+
+import { Router } from "react-router-dom";
+import DefaultContainer from "./container/default-container";
+import history from "./history/history";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/header';
+import './styles/general.css';
 
 import './App.scss';
 
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Treat Me</h1>
-
-        <img src={stravaBtn} className="App-l" alt="logo" />
-
-
-      </header>
-    </div>
+    <Router history={history}>
+      <React.Fragment>
+        <Header />
+        <DefaultContainer />
+      </React.Fragment>
+    </Router>
   );
 }
 
 export default App;
+

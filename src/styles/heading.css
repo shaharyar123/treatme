@@ -1,0 +1,12 @@
+.page-heading {
+    font-family: 'Ubuntu';
+    color: #dc3545;
+}
+
+.page-heading > .heading-text {
+    font-size: 22px;
+}
+
+.page-heading>.add-item-icon {
+    float: right;
+}
