@@ -25,44 +25,35 @@ const Header = props => {
                         />
                     </Link>
                     {
-                        loggedInUser.userType === 'Default' ?
-                            secureRoutes.indexOf(location) !== -1 && (
-                                <>
-                                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                                    <Navbar.Collapse id="responsive-navbar-nav">
-                                        <Nav>
-                                            <Link to='invite' className='nav-links'>Invitation</Link>
-                                        </Nav>
-                                    </Navbar.Collapse>
-                                </>
-                            ) : loggedInUser.userType === 'Super Admin' ? (
-                                <>
-                                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                                    <Navbar.Collapse id="responsive-navbar-nav">
-                                        <Nav>
-                                            <Link to='users' className='nav-links'>Users</Link>
-                                        </Nav>
-                                    </Navbar.Collapse>
-                                </>
-                            ) : null
+
+                        secureRoutes.indexOf(location) !== -1 && (
+                            <>
+                                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                                <Navbar.Collapse id="responsive-navbar-nav">
+                                    <Nav>
+                                        <Link to='/' className='nav-links'>Home</Link>
+                                    </Nav>
+                                    <Nav className="ml-auto">
+                                        <NavDropdown title="Profile" id="basic-nav-dropdown" alignRight={true}>
+                                            {/* <NavDropdown.Item onClick={() => history.push('/manage_accounts')}>Manage Accounts</NavDropdown.Item>
+                                            <NavDropdown.Item onClick={() => history.push('/accounts')}>Switch Account</NavDropdown.Item> */}
+                                            <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
+                                        </NavDropdown>
+                                    </Nav>
+                                </Navbar.Collapse>
+                            </>
+                        )
                     }
 
 
                     {
-                        loggedInUser.userType === 'Default' ?
-                            secureRoutes.indexOf(location) !== -1 && (
-                                <NavDropdown title="Profile" id="basic-nav-dropdown" alignRight={true}>
-                                    <NavDropdown.Item onClick={() => history.push('/manage_accounts')}>Manage Accounts</NavDropdown.Item>
-                                    <NavDropdown.Item onClick={() => history.push('/accounts')}>Switch Account</NavDropdown.Item>
-                                    <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
-                                </NavDropdown>
-                            )
-                            : loggedInUser.userType === 'Super Admin' ? (
-                                <NavDropdown title="Profile" id="basic-nav-dropdown" alignRight={true}>
-                                    <NavDropdown.Item onClick={() => history.push('/profile')}>My Profile</NavDropdown.Item>
-                                    <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
-                                </NavDropdown>
-                            ) : null
+
+                        // <NavDropdown title="Profile" id="basic-nav-dropdown" alignRight={true}>
+                        //     <NavDropdown.Item onClick={() => history.push('/manage_accounts')}>Manage Accounts</NavDropdown.Item>
+                        //     <NavDropdown.Item onClick={() => history.push('/accounts')}>Switch Account</NavDropdown.Item>
+                        //     <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
+                        // </NavDropdown>
+
                     }
 
 
